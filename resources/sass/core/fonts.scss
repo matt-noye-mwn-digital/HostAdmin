@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'interBlack';
+    src: url("../fonts/Inter_28pt-Black.ttf");
+}
+@font-face {
+    font-family: 'interBold';
+    src: url("../fonts/Inter_28pt-Bold.ttf");
+}
+@font-face {
+    font-family: 'interMedium';
+    src: url("../fonts/Inter_28pt-Medium.ttf");
+}
+@font-face {
+    font-family: 'roboSemiBold';
+    src: url("../fonts/Roboto-SemiBold.ttf");
+}
+@font-face {
+    font-family: 'roboMedium';
+    src: url("../fonts/Roboto-Medium.ttf");
+}
+@font-face {
+    font-family: 'roboRegular';
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+    font-family: 'roboLight';
+    src: url("../fonts/Roboto-Light.ttf");
+}
+
+$titleBlack: 'interBlack', sans-serif;
+$titleBold: 'interBold', sans-serif;
+$titleMedium: 'interMedium', sans-serif;
+$bodySemiBold: 'roboSemiBold', sans-serif;
+$bodyMedium: 'roboMedium', sans-serif;
+$bodyRegular: 'roboRegular', sans-serif;
+$bodyLight: 'roboLight', sans-serif;

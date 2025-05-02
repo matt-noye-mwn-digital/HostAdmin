@@ -1,0 +1,59 @@
+.sidebarWrapper {
+    background: hsl(196, 94%, 48%);;
+    height: 100svh;
+    left: -25%;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 0;
+
+    header {
+
+        margin: 0 0 2rem 0;
+        padding: 0;
+        a.brand {
+            color: $white;
+            font-size: 2rem;
+            text-decoration: none;
+        }
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;;
+        gap: 1rem;
+        list-style: none;
+
+        li {
+            a {
+                color: $white;
+                display: block;
+                font-size: 1.1rem;
+                text-decoration: none;
+                @include transition(all .4s ease-in-out);
+                width: 100%;
+
+                i {
+                    font-size: 1rem;
+                    margin-right: 10px;
+                }
+
+                &:hover,
+                &.active {
+                    background-color: $primary;
+                    color: $secondary;
+                }
+            }
+        }
+    }
+    .bottomNavWrap {
+        bottom: 1rem;
+        position: fixed;
+
+    }
+
+    &.open {
+        left: 0;
+        width: 20%;
+    }
+}

@@ -1,0 +1,200 @@
+header {
+    margin: .5rem 0 1rem 0;
+    .topbar {
+        background-color: $white;
+        border: 1px solid $border;
+        border-radius: 10px;
+        padding: 1rem 0;
+
+        .topBarBrand {
+
+        }
+        button.sidebarToggler {
+            background-color: transparent;
+            border: 0;
+            border-radius: 0;
+            box-shadow: none;
+            color: $primary;
+            font-size: 1.25rem;
+            outline: none;
+            text-decoration: none;
+        }
+
+        nav.topbarRightNav {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 2rem;
+            list-style: none;
+
+            li {
+
+                &.dropdown {
+
+                    &.userDropdown {
+                        a.dropdown-toggle {
+                            align-items: center;
+                            background: hsl(196, 94%, 48%);
+                            border: 0;
+                            border-radius: 50%;
+                            box-shadow: none;
+                            color: $white;
+                            display: flex;
+                            font-family: $titleMedium;
+                            font-size: 1rem;
+                            height: 50px;
+                            justify-content: center;
+                            text-decoration: none;
+                            @include transition(all .4s ease-in-out);
+                            width: 50px;
+
+                            &:hover,
+                            &.active,
+                            &.show {
+                                background-color: $primary;
+                                box-shadow: none;
+                                cursor: pointer;
+                                outline: none;
+                                text-decoration: none;
+                            }
+
+                            &:after {
+                                display: none;
+                            }
+                        }
+                        .dropdown-menu {
+                            padding: 1rem;
+                            li {
+                                margin-bottom: 1rem;
+
+                                a {
+                                    color: $mutedTextColour;
+                                    display: block;
+                                    font-family: $bodyRegular;
+                                    font-size: 1rem;
+                                    text-decoration: none;
+                                    @include transition(all .4s ease-in-out);
+                                    width: 100%;
+
+                                    i {
+                                        font-size: 1rem;
+                                        margin-right: 10px;
+                                    }
+
+                                    &:hover {
+                                        background-color: transparent;
+                                        border: 0;
+                                        box-shadow: none;
+                                        color: $primary;
+                                        outline: none;
+                                        text-decoration: none;
+                                    }
+                                }
+                                &.top {
+                                    border-bottom: 1px solid $border;
+                                    margin-bottom: 1rem;
+                                    padding-bottom: 1rem;
+
+                                    .userName {
+                                        color: $mainHeadingColour;
+                                        font-family: $titleMedium;
+                                        font-size: 1.2rem;
+                                        line-height: 1.5rem;
+                                    }
+                                    .userEmail {
+                                        color: $mutedTextColour;
+                                        font-family: $bodyLight;
+                                        font-size: 1rem;
+                                        line-height: 1.5rem;
+                                    }
+                                }
+                                &:last-of-type {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+
+                    &.notifDropdown {
+                        .dropdown-toggle {
+                            background-color: transparent;
+                            border: 0;
+                            color: $mutedTextColour;
+                            font-family: $titleMedium;
+                            font-size: 1.2rem;
+                            position: relative;
+                            text-decoration: none;
+                            @include transition(all .4s ease-in-out);
+
+                            &.hasNotifications {
+                                color: $secondary;
+                            }
+
+                            &:hover,
+                            &.active,
+                            &.show {
+                                background-color: transparent;
+                                border: 0;
+                                box-shadow: none;
+                                color: $primary;
+                                outline: none;
+                                text-decoration: none;
+                            }
+
+                            &:after {
+                                display: none;
+                            }
+                        }
+                        .dropdown-menu {
+                            padding: 1rem;
+                            li {
+                                margin-bottom: 1rem;
+                                &.top {
+                                    border-bottom: 1px solid $border;
+                                    margin-bottom: 1rem;
+                                    padding-bottom: 1rem;
+
+                                    .notifTitle {
+                                        align-items: center;
+                                        color: $mainHeadingColour;
+                                        display: flex;
+                                        flex-direction: row;
+                                        font-family: $titleBold;
+                                        font-size: 1.2rem;
+                                        gap: 1rem;
+                                        line-height: 1.5rem;
+
+                                        span.notifCount {
+                                            align-items: center;
+                                            background-color: $primary;
+                                            border-radius: 50%;
+                                            box-shadow: none;
+                                            color: $white;
+                                            display: flex;
+                                            font-size: .9rem;
+                                            justify-content: center;
+                                            height: 30px;
+
+                                            width: 30px;
+                                        }
+                                    }
+                                }
+
+                                &:last-of-type {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+
+                    .dropdown-menu {
+                        background-color: $white;
+
+                        width: 350px;
+                    }
+                }
+            }
+        }
+    }
+}

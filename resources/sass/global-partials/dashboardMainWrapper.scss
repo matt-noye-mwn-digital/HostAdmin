@@ -1,0 +1,10 @@
+.dashboardMainWrapper {
+    margin-left: 20%;
+    padding: 0 1rem;
+    width: 80%;
+
+    &.full {
+        margin-left: 0;
+        width: 100%;
+    }
+}

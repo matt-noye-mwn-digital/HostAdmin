@@ -1,0 +1,20 @@
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+//Fontawesome
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+// Core
+@import "core/colours";
+@import "core/fonts";
+@import "core/mixins";
+
+//Global Partials
+@import "global-partials/topBar";
+@import "global-partials/sidebar";
+@import "global-partials/dashboardMainWrapper";
+@import "global-partials/dashboardPageTitleBanner";
+@import "global-partials/dashboardPageMain";
