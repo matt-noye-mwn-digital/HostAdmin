@@ -8,7 +8,7 @@
                     </a>
                 </header>
                 @include('admin.layouts.navs.sidebarMainNav')
-                @include('admin.layouts.navs.sidebarBottomNav')
+                {{--@include('admin.layouts.navs.sidebarBottomNav')--}}
             </div>
         </div>
     </div>

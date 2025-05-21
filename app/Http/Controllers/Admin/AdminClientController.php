@@ -16,8 +16,10 @@ class AdminClientController extends Controller
      */
     public function index()
     {
-
-        return view('admin.pages.clients.index');
+        $clients = Client::orderBy('id', 'desc')
+            ->with('clientUser')
+            ->paginate(10);
+        return view('admin.pages.clients.index', compact('clients'));
     }
 
     /**
@@ -80,9 +82,10 @@ class AdminClientController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $client = Client::where('id', $id)->first();
+        return view('admin.pages.clients.show', compact('client'));
     }
 
     /**

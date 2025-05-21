@@ -18,8 +18,53 @@
                     <div class="card-body">
                         <div class="table-responsive-lg">
                             <table class="table">
-                                <thead></thead>
-                                <tbody></tbody>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Full Name</th>
+                                        <th>Company Name</th>
+                                        <th>Email</th>
+                                        <th>Services</th>
+                                        <th>Created</th>
+                                        <th class="actions"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($clients as $client)
+                                        <tr>
+                                            <td>{{ $client->id }}</td>
+                                            <td>{{ $client->clientUser->full_name }}</td>
+                                            <th>{{ $client->company_name ?? '' }}</th>
+                                            <td>{{ $client->clientUser->email }}</td>
+                                            <td>--</td>
+                                            <td>{{ date('d/m/Y', strtotime($client->created_at)) }}</td>
+                                            <td class="actions">
+                                                <div class="dropdown">
+                                                    <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="fas fa-ellipsis-v"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-menu-end">
+                                                        <li>
+                                                            <a href="">View</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Edit</a>
+                                                        </li>
+                                                        <li>
+                                                            <form action="" method="post">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <button type="submit">
+                                                                    Delete
+                                                                </button>
+                                                            </form>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
                             </table>
                         </div>
                     </div>

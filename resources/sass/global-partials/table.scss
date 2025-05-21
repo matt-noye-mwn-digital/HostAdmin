@@ -1,0 +1,79 @@
+table {
+    thead {
+
+    }
+    tbody {
+        tr {
+            td {
+                color: $bodyText;
+                font-family: $bodyReg;
+                font-size: 1rem;
+                &.actions {
+                    text-align: right;
+                    .dropdown {
+                        .dropdown-toggle {
+                            color :$bodyText;
+                            display: block;
+                            font-size: 1.2rem;
+
+                            &.show,
+                            &:hover{
+                                color: $primary;
+                            }
+                            &:after {
+                                display: none;
+                            }
+                        }
+                        .dropdown-menu {
+                            background-color: $surface;
+                            border: 1px solid $border;
+                            border-radius: 5px;
+                            box-shadow: 10px 10px 26px -11px rgba(0,0,0,0.5);
+                            -webkit-box-shadow: 10px 10px 26px -11px rgba(0,0,0,0.5);
+                            -moz-box-shadow: 10px 10px 26px -11px rgba(0,0,0,0.5);
+
+                            min-width: 300px;
+                            padding: 1rem;
+                            width: auto;
+
+                            li {
+                                display: block;
+                                margin-bottom: 1rem;
+                                width: 100%;
+
+                                a, button {
+                                    background-color: transparent;
+                                    border: 0;
+                                    box-shadow: none;
+                                    color: $bodyText;
+                                    display: block;
+                                    font-family: $bodyReg;
+                                    font-size: 1rem;
+                                    outline: none;
+                                    padding: 0;
+                                    text-align: left;
+                                    text-decoration: none;
+                                    @include transition(all .4s ease-in-out);
+
+                                    &:hover {
+                                        background-color: transparent;
+                                        border: 0;
+                                        box-shadow: none;
+                                        color: $primary;
+                                        outline: none;
+                                        text-decoration: none;
+                                    }
+                                }
+
+
+                                &:last-of-type {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
