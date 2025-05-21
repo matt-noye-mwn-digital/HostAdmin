@@ -1,8 +1,8 @@
 header {
     margin: .5rem 0 1rem 0;
     .topbar {
-        background-color: $white;
-        border: 1px solid $border;
+        background-color: $surface;
+        //border: 1px solid $border;
         border-radius: 10px;
         padding: 1rem 0;
 
@@ -18,6 +18,16 @@ header {
             font-size: 1.25rem;
             outline: none;
             text-decoration: none;
+
+            &:hover,
+            &:focus {
+                background-color: transparent;
+                border: 0;
+                box-shadow: none;
+                color: $primaryHover;
+                outline: none;
+                text-decoration: none;
+            }
         }
 
         nav.topbarRightNav {
@@ -35,13 +45,13 @@ header {
                     &.userDropdown {
                         a.dropdown-toggle {
                             align-items: center;
-                            background: hsl(196, 94%, 48%);
+                            background: $primary;
                             border: 0;
                             border-radius: 50%;
                             box-shadow: none;
                             color: $white;
                             display: flex;
-                            font-family: $titleMedium;
+                            font-family: $titleSemiBold;
                             font-size: 1rem;
                             height: 50px;
                             justify-content: center;
@@ -52,7 +62,7 @@ header {
                             &:hover,
                             &.active,
                             &.show {
-                                background-color: $primary;
+                                background-color: $primaryHover;
                                 box-shadow: none;
                                 cursor: pointer;
                                 outline: none;
@@ -64,14 +74,15 @@ header {
                             }
                         }
                         .dropdown-menu {
+                            background-color: $surface;
                             padding: 1rem;
                             li {
                                 margin-bottom: 1rem;
 
                                 a {
-                                    color: $mutedTextColour;
+                                    color: $bodyText;
                                     display: block;
-                                    font-family: $bodyRegular;
+                                    font-family: $bodyReg;
                                     font-size: 1rem;
                                     text-decoration: none;
                                     @include transition(all .4s ease-in-out);
@@ -97,14 +108,14 @@ header {
                                     padding-bottom: 1rem;
 
                                     .userName {
-                                        color: $mainHeadingColour;
-                                        font-family: $titleMedium;
+                                        color: $primary;
+                                        font-family: $titleSemiBold;
                                         font-size: 1.2rem;
                                         line-height: 1.5rem;
                                     }
                                     .userEmail {
-                                        color: $mutedTextColour;
-                                        font-family: $bodyLight;
+                                        color: $bodyText;
+                                        font-family: $bodyReg;
                                         font-size: 1rem;
                                         line-height: 1.5rem;
                                     }
@@ -120,15 +131,15 @@ header {
                         .dropdown-toggle {
                             background-color: transparent;
                             border: 0;
-                            color: $mutedTextColour;
-                            font-family: $titleMedium;
+                            color: $bodyText;
+                            font-family: $titleSemiBold;
                             font-size: 1.2rem;
                             position: relative;
                             text-decoration: none;
                             @include transition(all .4s ease-in-out);
 
                             &.hasNotifications {
-                                color: $secondary;
+                                color: $primaryHover;
                             }
 
                             &:hover,
@@ -151,13 +162,13 @@ header {
                             li {
                                 margin-bottom: 1rem;
                                 &.top {
-                                    border-bottom: 1px solid $border;
+                                    //border-bottom: 1px solid $border;
                                     margin-bottom: 1rem;
                                     padding-bottom: 1rem;
 
                                     .notifTitle {
                                         align-items: center;
-                                        color: $mainHeadingColour;
+                                        color: $headings;
                                         display: flex;
                                         flex-direction: row;
                                         font-family: $titleBold;
@@ -170,7 +181,7 @@ header {
                                             background-color: $primary;
                                             border-radius: 50%;
                                             box-shadow: none;
-                                            color: $white;
+                                            color: $surface;
                                             display: flex;
                                             font-size: .9rem;
                                             justify-content: center;
@@ -189,7 +200,7 @@ header {
                     }
 
                     .dropdown-menu {
-                        background-color: $white;
+                        background-color: $surface;
 
                         width: 350px;
                     }

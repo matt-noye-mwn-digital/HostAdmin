@@ -15,6 +15,7 @@ Route::middleware(['auth', 'role:super admin|admin'])->name('admin.')->prefix('a
     Route::name('clients.')->prefix('clients')->group(function () {
         Route::get('/', [AdminClientController::class, 'index'])->name('index');
         Route::get('/create', [AdminClientController::class, 'create'])->name('create');
+        Route::post('/store', [AdminClientController::class, 'store'])->name('store');
     });
 });
 //Staff Routes

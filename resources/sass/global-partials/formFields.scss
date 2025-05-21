@@ -1,0 +1,67 @@
+form {
+    label {
+        color: $bodyText;
+        display: block;
+        font-family: $bodyMedium;
+        font-size: 1rem;
+        margin-bottom: 5px;
+
+        span {
+            color: $danger;
+        }
+    }
+    input[type='text'],
+    input[type='email'],
+    input[type='tel'],
+    input[type='password'],
+    input[type='date'],
+    input[type='number'],
+    input[type='search'],
+    input[type='url'] {
+        background-color: $surface;
+        border: 1px solid $border;
+        border-radius: 5px;
+        box-shadow: none;
+        color: $bodyText;
+        display: block;
+        height: 40px;
+        margin-bottom: 1rem;
+        padding: 0 .5rem;
+        @include transition(all .4s ease-in-out);
+        width: 100%;
+
+        &:focus {
+            background-color: $surface;
+            border: 1px solid $primaryHover;
+            box-shadow: none;
+            color: $bodyText;
+            outline: none;
+            text-decoration: none;
+        }
+    }
+    select {
+        background-color: $surface;
+        border: 1px solid $border;
+        border-radius: 5px;
+        box-shadow: none;
+        color: $bodyText;
+        display: block;
+        height: 40px;
+        margin-bottom: 1rem;
+        padding: 0 .5rem;
+        @include transition(all .4s ease-in-out);
+        width: 100%;
+
+        &:focus {
+            background-color: $surface;
+            border: 1px solid $primaryHover;
+            box-shadow: none;
+            color: $bodyText;
+            outline: none;
+            text-decoration: none;
+        }
+    }
+    textarea {
+
+    }
+}

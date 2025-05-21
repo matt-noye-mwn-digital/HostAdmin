@@ -1,5 +1,5 @@
 .sidebarWrapper {
-    background: hsl(196, 94%, 48%);;
+    background: $primary;
     height: 100svh;
     left: -25%;
     padding: 1rem;
@@ -26,7 +26,7 @@
 
         li {
             a {
-                color: $white;
+                color: $surface;
                 display: block;
                 font-size: 1.1rem;
                 text-decoration: none;
@@ -40,8 +40,11 @@
 
                 &:hover,
                 &.active {
-                    background-color: $primary;
-                    color: $secondary;
+                    background-color: transparent;
+                    border: 0;
+                    box-shadow: none;
+                    color: $primaryHover;
+                    outline: none;
                 }
             }
         }

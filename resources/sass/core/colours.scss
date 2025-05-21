@@ -1,38 +1,34 @@
-$lightBackground: #F7FAFC;
-$lightForeground: #1E293B;
-$card: #FFFFFF;
-$cardForground: #1E293B;
-$primary: #0EA5E9;
-$primaryForground: #F7FAFC;
-$secondary: #284CBD;
-$muted: #F5F7FB;
-$mutedForeground: #64748B;
-$accent: #F5F7FB;
-$accentForeground: #1E293B;
-$border: #E2E8F0;
-$input: #E2E8F0;
-$ring: #0EA5E9;
+$primary: #0097e2; //Main brand, action colour
+$primaryHover: #0068b5; //Use for hover/focus effects
+$primaryTint: #e6f4fb; // Backgrounds, table hightlights, pills
 
-//Sidebar Colours
-$sidebarBackground: #0EA5E9;
-$sidebarPrimaryForeground: #0EA5E9;
-$sidebarAccent: #CCF3FF;
-$sidebarAccentForeground: #0EA5E9;
-$sidebarBorder: #57CBFF;
+$background: #ffffff; //Page Background
+$surface: #f8f9fa; //Cards, containers, dropdowns
+$border: #e0e0e0; //Dividers, table borders
+$headings: #2c3e50; //Titles, headings and strong text
+$bodyText: #4f4f4f; //Body Text, Paragraphs, Descriptions
 
-//Font colours
-$mainHeadingColour: #1E293B;
-$cardTitleColour: #1E293B;
-$sectionHeadingColour: #1E293B;
-$generalTextColour: #1E293B;
-$mutedTextColour: #64748B;
+//Status Colours
+$success: #28A745;
+$danger: #DC3545;
+$warning: #FFC107;
+$info: #17A2B8;
 
-$lightBlue: #3B82F6;
-$darkBlue: #1E40AF;
-$green: #22C55E;
-
-$lightGrey: #F9FAFB;
-$darkGrey: #1F2937;
+//Accent Colours
+$accent1: #6C5CE7; //Graphs, charts, tags
+$accent2: #55EFC4; //Charts, Highlights
+$accent3: #FF7675; //Visual Interest (low prio)
+$accent4: #FDCB6E; //Optional Hightlights
 
 $white: #ffffff;
 $black: #000000;
+
+$offWhite: rgba(255,255,255,0.5);
+$offBlack: rgba(0,0,0,0.5);
+
+.offWhite {
+    color: $offWhite !important;
+}
+.offBlack {
+    color: $offBlack !important;
+}

@@ -1,0 +1,36 @@
+a.primarySolidBtn,
+button.primarySolidBtn,
+input.primarySolidBtn {
+    background-color: $primary;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: none;
+    color: $white;
+    font-family: $titleSemiBold;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    @include transition(all .4s ease-in-out);
+
+    i {
+        font-size: 1rem;
+        margin-right: 5px;
+    }
+
+    &:hover {
+        background-color: $primaryHover;
+        border: 0;
+        box-shadow: none;
+        color: $white;
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+a.primaryOutlineBtn,
+button.primaryOutlineBtn,
+input.primaryOutlineBtn {
+
+}

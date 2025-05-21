@@ -1,36 +1,35 @@
 @font-face {
-    font-family: 'interBlack';
-    src: url("../fonts/Inter_28pt-Black.ttf");
-}
-@font-face {
     font-family: 'interBold';
-    src: url("../fonts/Inter_28pt-Bold.ttf");
+    src: url("../fonts/Inter_24pt-Bold.ttf");
 }
 @font-face {
-    font-family: 'interMedium';
-    src: url("../fonts/Inter_28pt-Medium.ttf");
+    font-family: 'interSemiBold';
+    src: url("../fonts/Inter_24pt-SemiBold.ttf");
 }
 @font-face {
-    font-family: 'roboSemiBold';
-    src: url("../fonts/Roboto-SemiBold.ttf");
+    font-family: 'sourceSansMedium';
+    src: url("../fonts/SourceSans3-Medium.ttf");
 }
 @font-face {
-    font-family: 'roboMedium';
-    src: url("../fonts/Roboto-Medium.ttf");
-}
-@font-face {
-    font-family: 'roboRegular';
-    src: url("../fonts/Roboto-Regular.ttf");
-}
-@font-face {
-    font-family: 'roboLight';
-    src: url("../fonts/Roboto-Light.ttf");
+    font-family: 'sourceSansReg';
+    src: url("../fonts/SourceSans3-Regular.ttf");
 }
 
-$titleBlack: 'interBlack', sans-serif;
 $titleBold: 'interBold', sans-serif;
-$titleMedium: 'interMedium', sans-serif;
-$bodySemiBold: 'roboSemiBold', sans-serif;
-$bodyMedium: 'roboMedium', sans-serif;
-$bodyRegular: 'roboRegular', sans-serif;
-$bodyLight: 'roboLight', sans-serif;
+$titleSemiBold: 'interSemiBold', sans-serif;
+$bodyMedium: 'sourceSans', sans-serif;
+$bodyReg: 'sourceSans', sans-serif;
+
+
+.fontBold {
+    font-family: $titleBold;
+}
+.fontSemiBold {
+    font-family: $titleSemiBold;
+}
+.bodyMedium {
+    font-family: $bodyMedium;
+}
+.bodyReg {
+    font-family: $bodyReg;
+}

@@ -11,11 +11,7 @@ export default defineConfig({
                 'resources/js/app.js',
                 'resources/js/admin.js',
             ],
-            refresh: [
-                'resources/sass/**/*.scss',
-                'resources/views/**/*.blade.php',
-                'resources/js/**/*.js',
-            ],
+            refresh: true,
 
         }),
 

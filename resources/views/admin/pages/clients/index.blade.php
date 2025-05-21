@@ -3,28 +3,28 @@
     All Clients
 @endpush
 @section('content')
-    <section class="dashboardPageTitleBanner">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1>@stack('page-title')</h1>
-                </div>
-            </div>
-        </div>
-    </section>
+    <x-dashboard.hero-banner
+        title="All Clients"
+        displayButton="yes"
+        buttonContent="Create Client"
+        buttonLink="{{ route('admin.clients.create') }}"
+        buttonIcon="<i class='fas fa-plus'></i>"
+    />
 
-    <section class="dashboardPageMain">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="table-responsive-lg">
-                        <table class="table w-100">
-                            <thead></thead>
-                            <tbody></tbody>
-                        </table>
+    <div class="container-fluid px-lg-0">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive-lg">
+                            <table class="table">
+                                <thead></thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 @endsection
