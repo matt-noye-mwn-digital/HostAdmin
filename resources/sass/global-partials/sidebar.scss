@@ -25,13 +25,17 @@
         list-style: none;
 
         li {
+            text-wrap: balance;
             a {
                 color: $surface;
                 display: block;
                 font-size: 1.1rem;
                 text-decoration: none;
+
                 @include transition(all .4s ease-in-out);
                 width: 100%;
+                word-break: break-word;
+                white-space: normal;
 
                 i {
                     font-size: 1rem;
@@ -47,6 +51,78 @@
                     outline: none;
                 }
             }
+            &.dropdown {
+                width: 100%;
+
+                a.dropdown-toggle {
+                    cursor: pointer;
+
+                    &:after {
+                        @include transition(all .4s ease-in-out);
+                    }
+
+                    &.show {
+                        background-color: transparent;
+                        border-radius: 5px;
+                        color: $white;
+                    }
+                }
+
+                ul.dropdown-menu {
+                    background-color: transparent;
+                    border: 0;
+                    padding: .5rem 1.5rem;
+                    position: relative !important;
+                    transform: translate(0px, 0px) !important;
+                    width: 100%;
+
+                    li {
+                        margin-bottom: 5px;
+
+                        a {
+                            color: $white;
+                            font-size: 1rem;
+                        }
+
+                        &.dropdown-sub-menu {
+                            left: 0 !important;
+                            position: relative;
+                            transform: translate(0px, 0px) !important;
+
+                            a.dropdown-toggle {
+
+                            }
+
+                            ul.dropdown-menu.submenu-dropdown-menu {
+                                display: none;
+                                left: 0 !important;
+                                padding-left: 15px;
+                                position: relative !important;
+                                top: 0 !important;
+                                transform: translate(0px, 0px) !important;
+                                width: 100%;
+
+                                li {
+                                    a {
+                                        color: $black;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.show {
+                            position: relative !important;
+                            transform: translate(0px, 0px) !important;
+
+                            &.dropdown-sub-menu {
+                                ul.dropdown-menu.submenu-dropdown-menu {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     .bottomNavWrap {
@@ -60,3 +136,4 @@
         width: 20%;
     }
 }
+

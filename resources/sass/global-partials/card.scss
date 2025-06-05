@@ -16,9 +16,80 @@
             color: $bodyText;
             font-family: $bodyReg;
         }
+
+        .card-title {
+            color: $headings;
+            margin-bottom: 0;
+        }
     }
     .card-body {
 
+        .internalPageNav {
+            display: block;
+            margin-left: auto;
+            .dropdown-toggle {
+                background-color: transparent;
+                border: 1px solid $primary;
+                border-radius: 5px;
+                box-shadow: none;
+                color: $primary;
+                font-family: $titleSemiBold;
+                font-size: 1.2rem;
+                line-height: 1.7rem;
+                padding: .75rem 1.5rem;
+                text-align: center;
+                @include transition(all .4s ease-in-out);
+
+                &:hover,
+                &.active,
+                &.show {
+                    background-color: $primary;
+                    border: 1px solid $primary;
+                    box-shadow: none;
+                    color: $white;
+                    outline: none;
+                    text-decoration: none;
+                }
+
+                &:after {
+                    display: none;
+                }
+            }
+            .dropdown-menu {
+                min-width: 300px;
+                li {
+                    margin-bottom: 5px;
+                    a {
+                        background-color: transparent;
+                        border: none;
+                        border-radius: 0;
+                        box-shadow: none;
+                        color: $primary;
+                        display: block;
+                        font-family: $titleSemiBold;
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        padding: .75rem 1.5rem;
+                        text-align: left;
+                        @include transition(all .4s ease-in-out);
+                        &:hover,
+                        &.active {
+                            background-color: $primary;
+                            border: none;
+                            box-shadow: none;
+                            color: $white;
+                            outline: none;
+                            text-decoration: none;
+                        }
+                    }
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+        }
     }
     .card-footer {
 
@@ -37,5 +108,10 @@
                 font-size: 1rem;
             }
         }
+    }
+
+    a {
+        text-decoration: none;
+        margin: 0;
     }
 }

@@ -34,5 +34,12 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
+    'whmcs' => [
+        'url' => env("WHMCS_URL"),
+        'identifier' => env("WHMCS_IDENTIFIER"),
+        'secret' => env("WHMCS_SECRET"),
+        'username' => env("WHMCS_USERNAME"),
+        'password' => env("WHMCS_PASSWORD"),
+    ]
 
 ];

@@ -1,3 +1,4 @@
+<label for="{{ $name }}">{{ $label }} @if($required == 'true') <span>*</span> @endif</label>
 <textarea name="{{ $name }}" id="{{ $name }}" class="form-control @error($name) is-invalid @enderror @if($isTinyEditor == 'yes') tinyEditor @endif" cols="30" rows="10" @if($required == 'true') required @endif>{{ old($name, $value) }}</textarea>
 
 @error($name)

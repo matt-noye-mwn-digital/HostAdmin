@@ -27,6 +27,12 @@ input.primarySolidBtn {
         outline: none;
         text-decoration: none;
     }
+
+    &.sm {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding: .5rem 1rem;
+    }
 }
 
 a.primaryOutlineBtn,

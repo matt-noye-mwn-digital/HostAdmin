@@ -17,7 +17,8 @@ form {
     input[type='date'],
     input[type='number'],
     input[type='search'],
-    input[type='url'] {
+    input[type='url'],
+    input[type='file'] {
         background-color: $surface;
         border: 1px solid $border;
         border-radius: 5px;
@@ -61,7 +62,64 @@ form {
             text-decoration: none;
         }
     }
-    textarea {
+    .select2-container {
+        margin-bottom: 15px;
+    }
+    .select2-container .select2-selection--single {
+        background-color: $surface;
+        border: 1px solid $border;
+        border-radius: 10px;
+        box-shadow: none;
+        color: $black;
+        font-family: $bodyReg;
+        font-size: 1rem;
+        height: 40px;
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
 
+        &:focus {
+            background-color: $white;
+            border: 1px solid $primary;
+            outline: none;
+        }
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 40px;
+        right: 10px;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        line-height: 40px;
+        color: $black;
+    }
+
+    .select2-container--default .select2-results__option--highlighted[aria-selected] {
+        background-color: $primary;
+        color: $white;
+    }
+    textarea {
+        background-color: $surface;
+        border: 1px solid $border;
+        border-radius: 5px;
+        box-shadow: none;
+        color: $bodyText;
+        display: block;
+        min-height: 40px;
+        height: auto;
+        margin-bottom: 1rem;
+        padding: 0 .5rem;
+        @include transition(all .4s ease-in-out);
+        width: 100%;
+
+        &:focus {
+            background-color: $surface;
+            border: 1px solid $primaryHover;
+            box-shadow: none;
+            color: $bodyText;
+            outline: none;
+            text-decoration: none;
+        }
     }
 }

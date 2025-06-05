@@ -26,6 +26,7 @@
                                         <th>Email</th>
                                         <th>Services</th>
                                         <th>Created</th>
+                                        <th>Status</th>
                                         <th class="actions"></th>
                                     </tr>
                                 </thead>
@@ -34,10 +35,11 @@
                                         <tr>
                                             <td>{{ $client->id }}</td>
                                             <td>{{ $client->clientUser->full_name }}</td>
-                                            <th>{{ $client->company_name ?? '' }}</th>
+                                            <td>{{ $client->company_name ?? '--' }}</td>
                                             <td>{{ $client->clientUser->email }}</td>
                                             <td>--</td>
                                             <td>{{ date('d/m/Y', strtotime($client->created_at)) }}</td>
+                                            <td>{!! $client->getStatus() !!}</td>
                                             <td class="actions">
                                                 <div class="dropdown">
                                                     <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -68,6 +70,13 @@
                             </table>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="">
+                    {{ $clients->links() }}
                 </div>
             </div>
         </div>

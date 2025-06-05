@@ -18,7 +18,7 @@ class AdminClientController extends Controller
     {
         $clients = Client::orderBy('id', 'desc')
             ->with('clientUser')
-            ->paginate(10);
+            ->paginate(20);
         return view('admin.pages.clients.index', compact('clients'));
     }
 
